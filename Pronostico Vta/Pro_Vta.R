@@ -41,7 +41,7 @@ library(nnet)
   salida<- (output * maxValue)
   
    # En esta grafica mostramos la salida en $$$$
-   plot(salida,type = "o", col = "green")
+   plot(output,type = "o", col = "green")
  
   
 #}  
