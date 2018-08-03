@@ -39,6 +39,8 @@ library(nnet)
   output = predict(producto.nnet, input)
   # se multiplica el output por el valor maximo de normalizacion.
   salida<- (output * maxValue)
+  Joyeria<- data.frame(salida)
+  
   
    # En esta grafica mostramos la salida en $$$$
    plot(output,type = "o", col = "green")
