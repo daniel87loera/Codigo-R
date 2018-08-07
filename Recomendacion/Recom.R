@@ -1,6 +1,9 @@
-#Eighth code snippet
-installations <- Recom
 
+     #############################################################
+   ################## LECTOR DE INSTANCIA ##########################
+     ##############################################################
+ww <- ("C:\\Users\\V Tibs\\Desktop\\R\\Codigo-R\\Recomendacion\\Recom.csv")
+installations<- read.csv(ww,header = TRUE)
 head(installations)
 library('reshape')
 user.package.matrix <- cast(installations, User~ Package, value = 'installed')
@@ -60,7 +63,7 @@ most.probable.packages <- function(user, user.package.matrix, distances, k = 25)
                decreasing = TRUE))
 }
 
-user <- 3
+user <- 2
 
 listing <- most.probable.packages(user, user.package.matrix, distances)
 

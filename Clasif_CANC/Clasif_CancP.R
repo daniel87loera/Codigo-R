@@ -20,6 +20,7 @@ results <- predict(object = model, newdata = ABA.test, type = "raw")
 #mc
 Porcentaje <- round(results*100)
 # Correctamente clasificados
+
 x <- 100 * sum(diag(mc)) / sum(mc)
 #Agregar Columna de Prediccion a la tabla ABA.test
 ABA.test$PrediClas <- Porcentaje
@@ -40,3 +41,9 @@ Pruebajson <- as.data.frame(data)
 print(Pruebajson)
 Prueba2<- predict(object = model, newdata = Pruebajson, type = "raw")
 PorcentajeP <- Prueba2 * 100
+################ VECTOR #######################################
+
+
+
+
+
